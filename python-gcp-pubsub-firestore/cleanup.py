@@ -8,3 +8,5 @@ out = subprocess.run('ls', shell=True)
 print(out)
 
 delete_full_collection() # This fucntion delete the entire collection
+
+print('Program ended')

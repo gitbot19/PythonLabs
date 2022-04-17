@@ -45,5 +45,8 @@ def delete_full_collection():
         if deleted >= batch_size:
             return delete_collection(coll_ref, batch_size)
     # [END firestore_data_delete_collection]
-
-    delete_collection(db.collection(my_collection), 10)
+    try:
+        print('Going to start deletion process')
+        delete_collection(db.collection(my_collection), 10)
+    except:
+        print('Nothing to delete... continue')
